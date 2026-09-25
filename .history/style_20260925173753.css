@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #18212f;
+}
+
+
+.app {
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+
+header p {
+    color: #6b7280;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+.reset-btn {
+    border: none;
+    background: #ef4444;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+.reset-btn:hover {
+    background: #dc2626;
+}
+
+
+/* DASHBOARD */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+
+.card p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+.card h2 {
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+
+/* MAIN GRID */
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+}
+
+
+.box {
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+
+.section-header h2 {
+    font-size: 19px;
+}
+
+
+.section-header span {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* 7 DAYS */
+
+.week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+
+.day-card {
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    min-height: 105px;
+}
+
+
+.day-card.today {
+    border: 2px solid #2563eb;
+}
+
+
+.day-name {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+.date {
+    color: #6b7280;
+    font-size: 12px;
+    margin: 5px 0 10px;
+}
+
+
+.day-percent {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.mini-bar {
+    height: 7px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+
+.mini-fill {
+    height: 100%;
+    background: #2563eb;
+}
+
+
+/* TASK */
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.task:last-child {
+    border-bottom: none;
+}
+
+
+.task input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #16a34a;
+}
+
+
+.task-info {
+    flex: 1;
+}
+
+
+.task-title {
+    font-weight: bold;
+}
+
+
+.task-category {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+
+.task.completed .task-title {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+
+/* SUBJECT PROGRESS */
+
+.progress-item {
+    margin-top: 20px;
+}
+
+
+.progress-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+
+.progress-bar {
+    height: 11px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+.progress {
+    height: 100%;
+    width: 0%;
+    border-radius: 20px;
+    transition: width 0.3s;
+}
+
+
+.german {
+    background: #7c3aed;
+}
+
+
+.university {
+    background: #0f766e;
+}
+
+
+.programming {
+    background: #ea580c;
+}
+
+
+/* STREAK */
+
+.streak-box {
+    text-align: center;
+}
+
+
+.streak-box p {
+    color: #6b7280;
+}
+
+
+#bigStreak {
+    font-size: 55px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+
+.streak-box span {
+    color: #6b7280;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    color: #6b7280;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .week {
+        overflow-x: auto;
+        grid-template-columns: repeat(7, 120px);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .app {
+        padding: 12px;
+    }
+
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .card h2 {
+        font-size: 24px;
+    }
+
+}

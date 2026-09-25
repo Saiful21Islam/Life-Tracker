@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My 7 Day Life Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header>
+            <div>
+                <h1>My 7-Day Life Dashboard</h1>
+                <p id="weekLabel"></p>
+            </div>
+
+            <button class="reset-btn" onclick="resetWeek()">
+                Reset Week
+            </button>
+        </header>
+
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="card">
+                <p>Weekly Progress</p>
+                <h2 id="overall">0%</h2>
+            </div>
+
+            <div class="card">
+                <p>Completed</p>
+                <h2 id="doneCount">0</h2>
+            </div>
+
+            <div class="card">
+                <p>Remaining</p>
+                <h2 id="remaining">0</h2>
+            </div>
+
+            <div class="card">
+                <p>Current Streak</p>
+                <h2 id="streak">0 🔥</h2>
+            </div>
+
+        </section>
+
+
+        <div class="main-grid">
+
+            <!-- LEFT SIDE -->
+            <main>
+
+                <!-- 7 Day Calendar -->
+                <section class="box">
+
+                    <div class="section-header">
+                        <h2>7-Day Calendar</h2>
+                        <span>Auto Weekly</span>
+                    </div>
+
+                    <div id="week" class="week"></div>
+
+                </section>
+
+
+                <!-- Today's Tasks -->
+                <section class="box tasks-box">
+
+                    <div class="section-header">
+                        <h2>Today's Tasks</h2>
+                        <span id="todayLabel"></span>
+                    </div>
+
+                    <div id="taskList"></div>
+
+                </section>
+
+            </main>
+
+
+            <!-- RIGHT SIDE -->
+            <aside>
+
+                <!-- Subject Progress -->
+                <section class="box">
+
+                    <h2>Subject Progress</h2>
+
+                    <!-- German -->
+                    <div class="progress-item">
+
+                        <div class="progress-title">
+                            <span>🇩🇪 German</span>
+                            <span id="germanPct">0%</span>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div
+                                id="germanBar"
+                                class="progress german"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- University -->
+                    <div class="progress-item">
+
+                        <div class="progress-title">
+                            <span>🎓 University</span>
+                            <span id="uniPct">0%</span>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div
+                                id="uniBar"
+                                class="progress university"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Programming -->
+                    <div class="progress-item">
+
+                        <div class="progress-title">
+                            <span>💻 Programming</span>
+                            <span id="codePct">0%</span>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div
+                                id="codeBar"
+                                class="progress programming"
+                            ></div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Streak -->
+                <section class="box streak-box">
+
+                    <p>🔥 Daily Streak</p>
+
+                    <div id="bigStreak">
+                        0
+                    </div>
+
+                    <span>Days Completed</span>
+
+                </section>
+
+            </aside>
+
+        </div>
+
+
+        <footer>
+            My 7-Day Life Tracker
+        </footer>
+
+    </div>
+
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
