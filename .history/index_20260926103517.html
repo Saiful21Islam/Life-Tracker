@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Day Life Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <header>
+        <div>
+            <h1>My 7-Day Life Tracker</h1>
+            <p id="weekLabel"></p>
+        </div>
+
+        <div class="date-control">
+            <label>Select Any Date</label>
+            <input type="date" id="datePicker">
+        </div>
+    </header>
+
+
+    <!-- Dashboard -->
+
+    <section class="dashboard">
+
+        <div class="card">
+            <span>Weekly Progress</span>
+            <strong id="overall">0%</strong>
+        </div>
+
+        <div class="card">
+            <span>Completed</span>
+            <strong id="completed">0</strong>
+        </div>
+
+        <div class="card">
+            <span>Remaining</span>
+            <strong id="remaining">0</strong>
+        </div>
+
+        <div class="card">
+            <span>Streak</span>
+            <strong id="streak">0 🔥</strong>
+        </div>
+
+    </section>
+
+
+    <main>
+
+        <!-- WEEK CALENDAR -->
+
+        <section class="box">
+
+            <div class="section-title">
+                <h2>7-Day Calendar</h2>
+                <button onclick="goToday()">Today</button>
+            </div>
+
+            <div id="week" class="week"></div>
+
+        </section>
+
+
+        <div class="content-grid">
+
+            <!-- TODAY / SELECTED DAY -->
+
+            <section class="box">
+
+                <div class="section-title">
+                    <h2 id="selectedDayTitle">
+                        Daily Tasks
+                    </h2>
+                </div>
+
+                <div id="taskList"></div>
+
+            </section>
+
+
+            <!-- SUBJECT PROGRESS -->
+
+            <aside class="box">
+
+                <h2>Progress</h2>
+
+
+                <div class="progress-item">
+
+                    <div>
+                        <span>💼 Job / Office</span>
+                        <b id="jobPercent">0%</b>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div
+                            id="jobBar"
+                            class="progress job">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <div>
+                        <span>🇩🇪 German</span>
+                        <b id="germanPercent">0%</b>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div
+                            id="germanBar"
+                            class="progress german">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <div>
+                        <span>🎓 University</span>
+                        <b id="universityPercent">0%</b>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div
+                            id="universityBar"
+                            class="progress university">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <div>
+                        <span>💻 Programming</span>
+                        <b id="programmingPercent">0%</b>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div
+                            id="programmingBar"
+                            class="progress programming">
+                        </div>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        © 2026 SAIFUL ISLAM
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
