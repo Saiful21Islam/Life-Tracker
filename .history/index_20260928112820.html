@@ -36,7 +36,9 @@
 
             <div class="header-actions">
 
-                <button class="btn btn-secondary" id="categoryBtn">
+                <button
+                    class="btn btn-secondary"
+                    id="categoryBtn">
                     ⚙ Categories
                 </button>
 
@@ -46,7 +48,9 @@
                         Select Date
                     </label>
 
-                    <input type="date" id="datePicker">
+                    <input
+                        type="date"
+                        id="datePicker">
 
                 </div>
 
@@ -128,14 +132,18 @@
                     <p>Choose a day to manage your routine</p>
                 </div>
 
-                <button class="btn btn-primary" id="todayBtn">
+                <button
+                    class="btn btn-primary"
+                    id="todayBtn">
                     Today
                 </button>
 
             </div>
 
 
-            <div id="week" class="week">
+            <div
+                id="week"
+                class="week">
             </div>
 
         </section>
@@ -163,7 +171,9 @@
                     </div>
 
 
-                    <button class="btn btn-primary" id="addTaskBtn">
+                    <button
+                        class="btn btn-primary"
+                        id="addTaskBtn">
 
                         + Add Task
 
@@ -172,7 +182,9 @@
                 </div>
 
 
-                <div id="taskList" class="task-list">
+                <div
+                    id="taskList"
+                    class="task-list">
                 </div>
 
             </section>
@@ -189,7 +201,10 @@
                         <p>Weekly category performance</p>
                     </div>
 
-                    <button class="icon-btn" id="categorySettingsBtn" title="Manage categories">
+                    <button
+                        class="icon-btn"
+                        id="categorySettingsBtn"
+                        title="Manage categories">
 
                         ⚙
 
@@ -198,7 +213,9 @@
                 </div>
 
 
-                <div id="categoryProgress" class="category-progress">
+                <div
+                    id="categoryProgress"
+                    class="category-progress">
 
                 </div>
 
@@ -220,7 +237,9 @@
     <!-- CATEGORY MODAL -->
     <!-- ================================================= -->
 
-    <div class="modal-overlay" id="categoryModal">
+    <div
+        class="modal-overlay"
+        id="categoryModal">
 
         <div class="modal">
 
@@ -231,18 +250,24 @@
                     <p>Create and organize your routine categories</p>
                 </div>
 
-                <button class="modal-close" data-close="categoryModal">
+                <button
+                    class="modal-close"
+                    data-close="categoryModal">
                     ×
                 </button>
 
             </div>
 
 
-            <div id="categoryList" class="category-list">
+            <div
+                id="categoryList"
+                class="category-list">
             </div>
 
 
-            <button class="btn btn-primary full-width" id="openAddCategoryBtn">
+            <button
+                class="btn btn-primary full-width"
+                id="openAddCategoryBtn">
 
                 + Add Category
 
@@ -257,7 +282,9 @@
     <!-- ADD / EDIT CATEGORY MODAL -->
     <!-- ================================================= -->
 
-    <div class="modal-overlay" id="categoryFormModal">
+    <div
+        class="modal-overlay"
+        id="categoryFormModal">
 
         <div class="modal small-modal">
 
@@ -273,7 +300,9 @@
                     </p>
                 </div>
 
-                <button class="modal-close" data-close="categoryFormModal">
+                <button
+                    class="modal-close"
+                    data-close="categoryFormModal">
                     ×
                 </button>
 
@@ -282,7 +311,9 @@
 
             <form id="categoryForm">
 
-                <input type="hidden" id="categoryId">
+                <input
+                    type="hidden"
+                    id="categoryId">
 
 
                 <div class="form-group">
@@ -291,7 +322,11 @@
                         Category Name
                     </label>
 
-                    <input type="text" id="categoryName" placeholder="Example: Fitness" required>
+                    <input
+                        type="text"
+                        id="categoryName"
+                        placeholder="Example: Fitness"
+                        required>
 
                 </div>
 
@@ -304,7 +339,11 @@
                             Icon
                         </label>
 
-                        <input type="text" id="categoryIcon" placeholder="🏋️" maxlength="4">
+                        <input
+                            type="text"
+                            id="categoryIcon"
+                            placeholder="🏋️"
+                            maxlength="4">
 
                     </div>
 
@@ -315,7 +354,10 @@
                             Color
                         </label>
 
-                        <input type="color" id="categoryColor" value="#2563eb">
+                        <input
+                            type="color"
+                            id="categoryColor"
+                            value="#2563eb">
 
                     </div>
 
@@ -324,14 +366,19 @@
 
                 <div class="form-actions">
 
-                    <button type="button" class="btn btn-secondary" data-close="categoryFormModal">
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-close="categoryFormModal">
 
                         Cancel
 
                     </button>
 
 
-                    <button type="submit" class="btn btn-primary">
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
 
                         Save Category
 
@@ -350,7 +397,9 @@
     <!-- ADD / EDIT TASK MODAL -->
     <!-- ================================================= -->
 
-    <div class="modal-overlay" id="taskModal">
+    <div
+        class="modal-overlay"
+        id="taskModal">
 
         <div class="modal">
 
@@ -369,7 +418,9 @@
                 </div>
 
 
-                <button class="modal-close" data-close="taskModal">
+                <button
+                    class="modal-close"
+                    data-close="taskModal">
                     ×
                 </button>
 
@@ -378,7 +429,9 @@
 
             <form id="taskForm">
 
-                <input type="hidden" id="taskId">
+                <input
+                    type="hidden"
+                    id="taskId">
 
 
                 <div class="form-group">
@@ -387,7 +440,11 @@
                         Task Title
                     </label>
 
-                    <input type="text" id="taskTitle" placeholder="Example: Programming Practice" required>
+                    <input
+                        type="text"
+                        id="taskTitle"
+                        placeholder="Example: Programming Practice"
+                        required>
 
                 </div>
 
@@ -398,7 +455,10 @@
                         Description
                     </label>
 
-                    <input type="text" id="taskDescription" placeholder="Example: Practice JavaScript for 1 hour">
+                    <input
+                        type="text"
+                        id="taskDescription"
+                        placeholder="Example: Practice JavaScript for 1 hour">
 
                 </div>
 
@@ -411,7 +471,9 @@
                             Category
                         </label>
 
-                        <select id="taskCategory" required>
+                        <select
+                            id="taskCategory"
+                            required>
                         </select>
 
                     </div>
@@ -423,7 +485,10 @@
                             Time
                         </label>
 
-                        <input type="text" id="taskTime" placeholder="7:00 PM - 8:00 PM">
+                        <input
+                            type="text"
+                            id="taskTime"
+                            placeholder="7:00 PM - 8:00 PM">
 
                     </div>
 
@@ -432,14 +497,19 @@
 
                 <div class="form-actions">
 
-                    <button type="button" class="btn btn-secondary" data-close="taskModal">
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-close="taskModal">
 
                         Cancel
 
                     </button>
 
 
-                    <button type="submit" class="btn btn-primary">
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
 
                         Save Task
 
@@ -456,7 +526,9 @@
 
     <!-- ================= TOAST ================= -->
 
-    <div id="toast" class="toast">
+    <div
+        id="toast"
+        class="toast">
 
         Saved successfully
 
