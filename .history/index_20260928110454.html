@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My 7-Day Life Tracker</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="brand">
+
+            <h1>
+                My 7-Day Life Tracker
+            </h1>
+
+            <p id="weekLabel">
+                Your weekly routine
+            </p>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <div class="date-control">
+
+                <label>
+                    Select Any Date
+                </label>
+
+                <input
+                    type="date"
+                    id="datePicker"
+                >
+
+            </div>
+
+
+            <button
+                class="primary-btn"
+                onclick="openTaskModal()"
+            >
+                + Add Task
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <section class="dashboard">
+
+
+        <div class="card">
+
+            <span>
+                Weekly Progress
+            </span>
+
+            <strong id="overall">
+                0%
+            </strong>
+
+            <div class="card-line">
+                Your weekly completion
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <span>
+                Completed
+            </span>
+
+            <strong id="completed">
+                0
+            </strong>
+
+            <div class="card-line">
+                Tasks completed
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <span>
+                Remaining
+            </span>
+
+            <strong id="remaining">
+                0
+            </strong>
+
+            <div class="card-line">
+                Tasks left
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <span>
+                Streak
+            </span>
+
+            <strong id="streak">
+                0 🔥
+            </strong>
+
+            <div class="card-line">
+                Consecutive days
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <main>
+
+
+        <!-- =========================
+             WEEK CALENDAR
+        ========================== -->
+
+        <section class="box">
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>
+                        7-Day Calendar
+                    </h2>
+
+                    <p class="section-subtitle">
+                        Plan your week your way
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="secondary-btn"
+                    onclick="goToday()"
+                >
+                    Today
+                </button>
+
+            </div>
+
+
+            <div
+                id="week"
+                class="week"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTENT GRID
+        ========================== -->
+
+        <div class="content-grid">
+
+
+            <!-- =========================
+                 DAILY TASKS
+            ========================== -->
+
+            <section class="box">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <h2 id="selectedDayTitle">
+                            Daily Tasks
+                        </h2>
+
+                        <p
+                            id="selectedDateText"
+                            class="section-subtitle"
+                        >
+                            Create your own routine
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-btn"
+                        onclick="openTaskModal()"
+                    >
+                        + Add Task
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="taskList"
+                    class="task-list"
+                ></div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 PROGRESS
+            ========================== -->
+
+            <aside class="box">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <h2>
+                            Categories
+                        </h2>
+
+                        <p class="section-subtitle">
+                            Weekly performance
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="small-btn"
+                        onclick="openCategoryModal()"
+                    >
+                        + Category
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="categoryProgress"
+                ></div>
+
+            </aside>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        © 2026 SAIFUL ISLAM
+
+    </footer>
+
+
+
+</div>
+
+
+
+<!-- =====================================================
+     ADD / EDIT TASK MODAL
+====================================================== -->
+
+<div
+    class="modal"
+    id="taskModal"
+>
+
+    <div class="modal-box">
+
+        <button
+            class="close-btn"
+            onclick="closeTaskModal()"
+        >
+            ×
+        </button>
+
+
+        <h2 id="taskModalTitle">
+            Create New Task
+        </h2>
+
+        <p class="modal-description">
+            Build your own daily routine.
+        </p>
+
+
+        <form id="taskForm">
+
+
+            <label>
+
+                Task Name
+
+                <input
+                    type="text"
+                    id="taskName"
+                    placeholder="Example: Learn German"
+                    required
+                >
+
+            </label>
+
+
+
+            <label>
+
+                Category
+
+                <select id="taskCategory">
+
+                </select>
+
+            </label>
+
+
+
+            <label>
+
+                Time
+
+                <input
+                    type="time"
+                    id="taskTime"
+                >
+
+            </label>
+
+
+
+            <label>
+
+                Priority
+
+                <select id="taskPriority">
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                    <option
+                        value="Medium"
+                        selected
+                    >
+                        Medium
+                    </option>
+
+                    <option value="High">
+                        High
+                    </option>
+
+                </select>
+
+            </label>
+
+
+
+            <div class="modal-buttons">
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    onclick="closeTaskModal()"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="save-btn"
+                >
+                    Save Task
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     CATEGORY MODAL
+====================================================== -->
+
+<div
+    class="modal"
+    id="categoryModal"
+>
+
+    <div class="modal-box">
+
+        <button
+            class="close-btn"
+            onclick="closeCategoryModal()"
+        >
+            ×
+        </button>
+
+
+        <h2>
+            Create Category
+        </h2>
+
+        <p class="modal-description">
+            Create your own routine category.
+        </p>
+
+
+        <form id="categoryForm">
+
+            <label>
+
+                Category Name
+
+                <input
+                    type="text"
+                    id="categoryName"
+                    placeholder="Example: Reading"
+                    required
+                >
+
+            </label>
+
+
+            <div class="modal-buttons">
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    onclick="closeCategoryModal()"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="save-btn"
+                >
+                    Create Category
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
